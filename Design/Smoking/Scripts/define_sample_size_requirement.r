@@ -49,9 +49,9 @@ pdf("Plots/define_sample_size_requirments.pdf", height = 6, width = 10)
     abline(h = -log10(0.05), col = "darkgreen", lwd = 2)
     abline(h = -log10(0.2), col = "red", lwd = 2)
     legend("topleft", pch = 19, col = "white",
-           legend = c(paste("Never-smokers mean metylation: ", 100*ns_mean, "%", sep = ""),
+           legend = c(paste("Never-smokers mean methylation: ", 100*ns_mean, "%", sep = ""),
                       paste("Never-smokers standard deviation: ", ns_sd, sep = ""),
-                      paste("Current smokers mean metylation: ", 100*cs_mean, "%", sep = ""),
+                      paste("Current smokers mean methylation: ", 100*cs_mean, "%", sep = ""),
                       paste("Current smokers standard deviation: ", cs_sd, sep = "")),
            bty = "n")
 
