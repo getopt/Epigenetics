@@ -38,15 +38,16 @@ for (size in c(2:20))
     all_results[[size]] <- -log10(results)
 }
 
-boxplot(all_results,
-        ylab = "-log10(p.value)", 
-	  xlab = "Sizes of groups of participants to compare",
-        range = 0.5,
-	  main = paste("Outcomes of ", nexpr, " experiments comparing CpG methylation \n",
-                     " between non-smokers and current smokers\n",
-                     "in groups from 2 to 20 participants")
-        )
-abline(h = -log10(0.05), col = "darkgreen", lwd = 2)
-abline(h = -log10(0.2), col = "red", lwd = 2)
+pdf("Plots/define_sample_size_requirments.pdf", height = 6, width = 10)
+    boxplot(all_results,
+            ylab = "-log10(p.value)", 
+    	    xlab = "Sizes of groups of participants to compare",
+            range = 0.5,
+    	    main = paste("Outcomes of ", nexpr, " experiments comparing CpG methylation \n",
+                         "between non-smokers and current smokers\n",
+                         "in groups from 2 to 20 participants"))
+    abline(h = -log10(0.05), col = "darkgreen", lwd = 2)
+    abline(h = -log10(0.2), col = "red", lwd = 2)
+dev.off()
 
 
